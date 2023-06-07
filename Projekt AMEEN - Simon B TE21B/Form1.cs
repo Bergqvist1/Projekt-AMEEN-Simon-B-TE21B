@@ -5,8 +5,8 @@ namespace Projekt_AMEEN___Simon_B_TE21B
         public Form1()
         {
             InitializeComponent();
-            listBox1.Items.Add(10);
-            listBox1.Items.Add(20);
+            listBox1.Items.Add(3);
+            listBox1.Items.Add(9);
 
             listBox1.SelectedItem = listBox1.Items[0];
         }
@@ -18,28 +18,28 @@ namespace Projekt_AMEEN___Simon_B_TE21B
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string högstaTal = listBox1.SelectedItem.ToString();
-            int störstaTal = int.Parse(högstaTal);
+            string hÃ¶gstaTal = listBox1.SelectedItem.ToString();
+            int stÃ¶rstaTal = int.Parse(hÃ¶gstaTal);
             Random slump = new Random();
 
-            int DatorTal = slump.Next(1, störstaTal + 1);
-            int användarTal = int.Parse(textBox1.Text);
+            int DatorTal = slump.Next(1, stÃ¶rstaTal + 1);
+            int anvÃ¤ndarTal = int.Parse(textBox1.Text);
 
-            if (användarTal == DatorTal)
+            if (anvÃ¤ndarTal == DatorTal)
             {
                 label6.Text = "Du vann! Du valde samma som datorn!";
                 label3.Text = "Datorn valde talet: " + DatorTal;
             }
 
-            else if (användarTal < DatorTal)
+            else if (anvÃ¤ndarTal < DatorTal)
             {
-                label6.Text = "Du förlorade! Du valde lägre tal än datorn.";
+                label6.Text = "Du fÃ¶rlorade! Du valde lÃ¤gre tal Ã¤n datorn.";
                 label3.Text = "Datorn valde talet: " + DatorTal;
             }
 
             else
             {
-                label6.Text = " Du förlorade! Du valde högre tal än datorn";
+                label6.Text = " Du fÃ¶rlorade! Du valde hÃ¶gre tal Ã¤n datorn";
                 label3.Text = "Datorn valde talet: " + DatorTal;
             }
         }
